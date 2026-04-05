@@ -1,0 +1,18 @@
+{
+  "name": "Hoofdpijn Dagboek",
+  "short_name": "Dagboek",
+  "description": "Mobiel hoofdpijn dagboek voor het bijhouden van klachten, triggers en symptomen.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5efe4",
+  "theme_color": "#f5efe4",
+  "lang": "nl-NL",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

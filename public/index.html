@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sabotage Doolhof</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=19">
+</head>
+<body>
+  <div id="countdown-overlay" class="countdown-overlay hidden" aria-live="polite">
+    <div class="countdown-panel">
+      <p id="countdown-overlay-label" class="eyebrow">Aftellen</p>
+      <strong id="countdown-overlay-number" class="countdown-number">3</strong>
+      <p id="countdown-overlay-copy" class="countdown-copy">De ronde begint zo.</p>
+    </div>
+  </div>
+  <div class="page-shell">
+    <header class="hero-panel">
+      <div class="hero-copy-block">
+        <p class="eyebrow">Laptop als spelbord, telefoon als controller</p>
+        <h1>Sabotage Doolhof</h1>
+        <p class="hero-copy">Gebruik de laptop als gedeeld speelscherm. Elke speler logt via de QR code in op een telefoon en bestuurt daar zijn eigen stip.</p>
+      </div>
+      <div class="hero-qr">
+        <img id="controller-qr-image" alt="QR-code voor controller">
+      </div>
+      <div class="hero-status">
+        <div>
+          <span class="meta-label">Kamer</span>
+          <strong id="room-code">ARENA</strong>
+        </div>
+        <div>
+          <span class="meta-label">Ronde</span>
+          <strong id="round-label">1</strong>
+        </div>
+        <div>
+          <span class="meta-label">Schermen</span>
+          <strong id="dashboard-count">0</strong>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout-grid">
+      <section class="panel panel-main">
+        <div class="panel-header">
+          <div>
+            <p id="mode-eyebrow" class="eyebrow">Dashboard</p>
+            <h2 id="mode-title">Gedeeld speelscherm</h2>
+          </div>
+        </div>
+
+        <form id="join-form" class="join-form">
+          <label>
+            Jouw naam
+            <input id="player-name" name="playerName" type="text" maxlength="18" placeholder="Vul je naam in">
+          </label>
+          <button id="join-button" class="primary-button" type="submit">Meedoen</button>
+          <p id="join-helper" class="join-helper">Open deze controllerpagina op elke telefoon, vul een naam in en ga de lobby in.</p>
+        </form>
+
+        <div class="status-banner">
+          <strong id="status-message">Verbinden...</strong>
+          <span id="countdown-label"></span>
+        </div>
+
+        <div id="lobby-banner" class="lobby-banner">
+          <div>
+            <p class="eyebrow">Lobby</p>
+            <h3 id="lobby-title">Wachten op spelers</h3>
+            <p id="lobby-copy" class="helper-copy">Laat minstens 2 spelers meedoen en start daarna de ronde vanaf de laptop.</p>
+          </div>
+          <div class="banner-actions">
+            <button id="stop-game-button" class="secondary-button hidden" type="button">Stop spel</button>
+            <button id="start-game-button" class="primary-button hidden" type="button">Start ronde</button>
+          </div>
+        </div>
+
+        <div id="lobby-players-card" class="card lobby-players-card">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Spelers</p>
+              <h3>Wie zijn er klaar?</h3>
+            </div>
+          </div>
+          <div id="lobby-players-list" class="scoreboard"></div>
+        </div>
+
+        <div class="arena-wrap">
+          <div id="maze-board" class="maze-board" aria-label="Game board"></div>
+        </div>
+      </section>
+
+      <aside class="panel panel-side">
+        <section class="card-stack">
+          <div class="card dashboard-score-card">
+            <div class="section-title">
+              <div>
+                <p class="eyebrow">Scorebord</p>
+                <h3>Eerste tot 3 wint</h3>
+              </div>
+            </div>
+            <div id="scoreboard" class="scoreboard"></div>
+          </div>
+
+          <div class="card player-card">
+            <p id="self-card-title" class="eyebrow">Dashboard</p>
+            <div id="self-summary" class="self-summary">
+              <strong>Nog niet verbonden</strong>
+              <span>Even wachten tot de spelstatus binnen is.</span>
+            </div>
+          </div>
+
+          <div id="controls-card" class="card">
+            <div class="controller-headline">
+              <p class="eyebrow">Besturing</p>
+              <strong id="controller-score-pill" class="points-pill">0/3</strong>
+            </div>
+            <div class="controls-grid">
+              <button class="control-button" type="button" data-direction="up" aria-label="Omhoog">Omhoog</button>
+              <button class="control-button" type="button" data-direction="left" aria-label="Links">Links</button>
+              <button class="control-button" type="button" data-direction="down" aria-label="Omlaag">Omlaag</button>
+              <button class="control-button" type="button" data-direction="right" aria-label="Rechts">Rechts</button>
+            </div>
+            <p id="controller-helper" class="helper-copy">Houd een knop ingedrukt om te blijven bewegen.</p>
+          </div>
+
+          <div id="sabotage-card" class="card">
+            <div class="controller-headline">
+              <div>
+                <p class="eyebrow">Sabotage</p>
+                <h3>Gebruik score</h3>
+              </div>
+              <strong id="points-pill" class="points-pill">0 punten</strong>
+            </div>
+            <div id="sabotage-list" class="sabotage-list"></div>
+          </div>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <template id="score-template">
+    <article class="score-row">
+      <div class="score-identity">
+        <span class="score-color"></span>
+        <div>
+          <strong class="score-name"></strong>
+          <p class="score-meta"></p>
+        </div>
+      </div>
+      <div class="score-values">
+        <span class="score-goals"></span>
+        <span class="score-effect"></span>
+      </div>
+    </article>
+  </template>
+
+  <script src="/app.js?v=17"></script>
+</body>
+</html>

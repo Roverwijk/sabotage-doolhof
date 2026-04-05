@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sabotage Doolhof Controller</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/controller.css?v=10">
+</head>
+<body>
+  <div id="countdown-overlay" class="countdown-overlay hidden" aria-live="polite">
+    <div class="countdown-panel">
+      <p id="countdown-overlay-label" class="eyebrow">Aftellen</p>
+      <strong id="countdown-overlay-number" class="countdown-number">3</strong>
+      <p id="countdown-overlay-copy" class="countdown-copy">De ronde begint zo.</p>
+    </div>
+  </div>
+  <main class="controller-shell">
+    <section class="controller-card intro-card">
+      <p class="eyebrow">Controller</p>
+      <h1>Sabotage Doolhof</h1>
+      <p class="intro-copy">Vul je naam in, ga de lobby in en gebruik je telefoon als besturing.</p>
+    </section>
+
+    <section class="controller-card">
+      <form id="join-form" class="join-form">
+        <label for="player-name">Jouw naam</label>
+        <input id="player-name" name="playerName" type="text" maxlength="18" placeholder="Vul je naam in">
+        <button id="join-button" type="submit">Naar lobby</button>
+      </form>
+      <p id="status-message" class="status-text">Verbinden...</p>
+    </section>
+
+    <section class="controller-card status-card">
+      <div>
+        <p class="eyebrow">Speler</p>
+        <strong id="player-name-label">Nog niet in de lobby</strong>
+      </div>
+      <div class="pill-row">
+        <span id="score-pill" class="pill">0 totaal</span>
+        <span id="maze-score-pill" class="pill">0/3 maze</span>
+      </div>
+      <p id="player-state" class="subtle-text">Wacht op de spelstatus.</p>
+    </section>
+
+    <section class="controller-card pad-card">
+      <div class="pad-head">
+        <div>
+          <p class="eyebrow">Besturing + sabotage</p>
+          <strong>Alles binnen duimbereik</strong>
+        </div>
+        <span id="pad-phase-pill" class="pill">Lobby</span>
+      </div>
+      <div class="action-pad">
+        <button id="maze-action" class="pad-button action-button" type="button" data-action-id="maze" data-slot="top-left">
+          <span class="pad-title">Shuffle</span>
+          <span class="pad-subtitle">Maze + doelen</span>
+        </button>
+        <button class="pad-button move-button" type="button" data-direction="up" data-slot="top-center">
+          <span class="pad-title">Omhoog</span>
+        </button>
+        <button id="swap-action" class="pad-button action-button" type="button" data-action-id="swap" data-slot="top-right">
+          <span class="pad-title">Inverse</span>
+          <span class="pad-subtitle">Knoppen omdraaien</span>
+        </button>
+        <button class="pad-button move-button" type="button" data-direction="left" data-slot="middle-left">
+          <span class="pad-title">Links</span>
+        </button>
+        <button class="pad-button move-button" type="button" data-direction="down" data-slot="middle-center">
+          <span class="pad-title">Omlaag</span>
+        </button>
+        <button class="pad-button move-button" type="button" data-direction="right" data-slot="middle-right">
+          <span class="pad-title">Rechts</span>
+        </button>
+        <button id="freeze-action-0" class="pad-button freeze-button" type="button" data-action-id="freeze" data-target-slot="0" data-slot="bottom-left">
+          <span class="pad-title">Freeze</span>
+          <span class="pad-subtitle">Speler 1</span>
+        </button>
+        <button id="freeze-action-1" class="pad-button freeze-button" type="button" data-action-id="freeze" data-target-slot="1" data-slot="bottom-center">
+          <span class="pad-title">Freeze</span>
+          <span class="pad-subtitle">Speler 2</span>
+        </button>
+        <button id="freeze-action-2" class="pad-button freeze-button" type="button" data-action-id="freeze" data-target-slot="2" data-slot="bottom-right">
+          <span class="pad-title">Freeze</span>
+          <span class="pad-subtitle">Speler 3</span>
+        </button>
+      </div>
+      <p id="controller-helper" class="subtle-text">Houd een bewegingsknop ingedrukt om te blijven bewegen.</p>
+      <p id="action-feedback" class="subtle-text">Sabotage laadt automatisch op.</p>
+    </section>
+  </main>
+
+  <script src="/controller.js?v=16"></script>
+</body>
+</html>

@@ -1,0 +1,1197 @@
+2026-04-04T17:11:15Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
+2026-04-04T17:11:15Z INF Requesting new quick Tunnel on trycloudflare.com...
+2026-04-04T17:11:19Z INF +--------------------------------------------------------------------------------------------+
+2026-04-04T17:11:19Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
+2026-04-04T17:11:19Z INF |  https://replication-fri-sitting-family.trycloudflare.com                                  |
+2026-04-04T17:11:19Z INF +--------------------------------------------------------------------------------------------+
+2026-04-04T17:11:19Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp]
+2026-04-04T17:11:19Z INF Version 2026.3.0 (Checksum 59b12880b24af581cf5b1013db601c7d843b9b097e9c78aa5957c7f39f741885)
+2026-04-04T17:11:19Z INF GOOS: windows, GOVersion: go1.24.13, GoArch: amd64
+2026-04-04T17:11:19Z INF Settings: map[ha-connections:1 protocol:quic url:http://localhost:3001]
+2026-04-04T17:11:19Z INF cloudflared will not automatically update on Windows systems.
+2026-04-04T17:11:19Z INF Generated Connector ID: d5383ad3-d136-4fb3-a9f6-1bd166a8e007
+2026-04-04T17:11:19Z INF Initial protocol quic
+2026-04-04T17:11:19Z INF ICMP proxy will use 192.168.199.232 as source for IPv4
+2026-04-04T17:11:19Z INF ICMP proxy will use fe80::4b98:6b20:fc9a:229c in zone Wi-Fi as source for IPv6
+2026-04-04T17:11:19Z INF cloudflared does not support loading the system root certificate pool on Windows. Please use --origin-ca-pool <PATH> to specify the path to the certificate pool
+2026-04-04T17:11:19Z INF ICMP proxy will use 192.168.199.232 as source for IPv4
+2026-04-04T17:11:19Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:11:20Z INF ICMP proxy will use fe80::4b98:6b20:fc9a:229c in zone Wi-Fi as source for IPv6
+2026-04-04T17:11:20Z INF Starting metrics server on 127.0.0.1:20241/metrics
+2026-04-04T17:11:25Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:11:25Z INF Retrying connection in up to 2s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:11:25Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T17:11:30Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T17:11:30Z INF Retrying connection in up to 4s connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T17:11:33Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T17:11:38Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T17:11:38Z INF Retrying connection in up to 8s connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T17:11:43Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T17:11:48Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T17:11:48Z INF Retrying connection in up to 16s connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T17:11:51Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T17:11:56Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T17:11:56Z INF Retrying connection in up to 32s connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T17:12:14Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:12:19Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:12:19Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:12:29Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T17:12:34Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T17:12:34Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T17:12:45Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:12:50Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:12:50Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:13:22Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T17:13:27Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T17:13:27Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T17:13:29Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T17:13:29Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:13:34Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:13:34Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:13:44Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:13:49Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:13:49Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:14:03Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T17:14:08Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T17:14:08Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T17:14:21Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:14:26Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:14:26Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:14:48Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:14:53Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:14:53Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:15:05Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T17:15:10Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T17:15:10Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T17:15:27Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:15:32Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:15:32Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:16:02Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T17:31:43Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: handshake did not complete in time" connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T17:31:43Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T17:31:49Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:31:54Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:31:54Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:32:15Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:32:15Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T17:32:20Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T17:32:20Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T17:32:52Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:32:57Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:32:57Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:33:21Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T17:33:26Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T17:33:26Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T17:33:53Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T17:33:58Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T17:33:58Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T17:34:08Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:34:13Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:34:13Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:34:30Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T17:34:35Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T17:34:35Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T17:35:01Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T17:35:06Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T17:35:06Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T17:35:07Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T17:35:12Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T17:35:12Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T17:35:13Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:35:18Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:35:18Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:35:23Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:35:23Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:35:28Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:35:28Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:35:29Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T17:35:34Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T17:35:34Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T17:35:53Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:35:58Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:35:58Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:36:27Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T17:36:32Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T17:36:32Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T17:36:47Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T17:36:52Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T17:36:52Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T17:37:02Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:37:07Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:37:07Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:37:24Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:37:29Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:37:29Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:37:41Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T17:37:46Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T17:37:46Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T17:38:03Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:38:08Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:38:08Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:38:16Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:38:16Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:38:21Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:38:21Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:38:25Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T17:38:30Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T17:38:30Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T17:38:32Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:38:37Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:38:37Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:38:59Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T17:39:04Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T17:39:04Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T17:39:07Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T17:39:12Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T17:39:12Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T17:39:19Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:39:24Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:39:24Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:39:28Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:39:33Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:39:33Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:39:54Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T17:39:59Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T17:39:59Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T17:40:21Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:40:26Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:40:26Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:40:26Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:40:26Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T17:40:31Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T17:40:31Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T17:40:41Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:40:46Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:40:46Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:41:05Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T17:41:10Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T17:41:10Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T17:41:19Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T17:41:24Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T17:41:24Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T17:41:47Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T17:41:52Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T17:41:52Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T17:42:08Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T17:42:13Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T17:42:13Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T17:42:30Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:42:35Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:42:35Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:43:02Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T17:43:07Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T17:43:07Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T17:43:28Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T17:43:33Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T17:43:33Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T17:43:34Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T17:43:34Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:43:39Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:43:39Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:44:00Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T17:44:05Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T17:44:05Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T17:44:35Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T17:44:40Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T17:44:40Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T17:45:04Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:45:09Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:45:09Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:45:38Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:45:43Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:45:43Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:45:45Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:45:50Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:45:50Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:46:04Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T17:46:09Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T17:46:09Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T17:46:28Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:46:33Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:46:33Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:46:34Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T17:46:39Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T17:46:39Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T17:47:09Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T17:47:09Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T17:47:14Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T17:47:14Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T17:47:40Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:47:45Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:47:45Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:48:10Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T17:48:15Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T17:48:15Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T17:48:28Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:48:33Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:48:33Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:48:48Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T17:48:53Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T17:48:53Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T17:49:19Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.107
+2026-04-04T17:49:24Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.107
+2026-04-04T17:49:24Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.107
+2026-04-04T17:49:56Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:50:01Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:50:01Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:50:22Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T17:50:27Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T17:50:27Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T17:50:33Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T17:50:38Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T17:50:38Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T17:51:06Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T17:51:06Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.107
+2026-04-04T17:51:11Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.107
+2026-04-04T17:51:11Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.107
+2026-04-04T17:51:39Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T17:51:44Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T17:51:44Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T17:51:47Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T17:51:52Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T17:51:52Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T17:52:19Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T17:52:24Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T17:52:24Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T17:52:47Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T17:52:52Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T17:52:52Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T17:52:55Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:53:00Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:53:00Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:53:14Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T17:53:19Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T17:53:19Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T17:53:26Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:53:31Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:53:31Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:54:02Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:54:07Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:54:07Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:54:10Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:54:10Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:54:15Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:54:15Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:54:17Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T17:54:22Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T17:54:22Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T17:54:42Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T17:54:47Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T17:54:47Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T17:54:47Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:54:52Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:54:52Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:55:06Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T17:55:11Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T17:55:11Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T17:55:41Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T17:55:46Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T17:55:46Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T17:56:14Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:56:19Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:56:19Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T17:56:22Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:56:27Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:56:27Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:56:31Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:56:36Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:56:36Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:56:56Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:56:56Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T17:57:01Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T17:57:01Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T17:57:14Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T17:57:19Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T17:57:19Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T17:57:37Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:57:42Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:57:42Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T17:58:07Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T17:58:12Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T17:58:12Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T17:58:31Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T17:58:36Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T17:58:36Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T17:58:54Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:58:59Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:58:59Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T17:59:07Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T17:59:12Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T17:59:12Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T17:59:23Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T17:59:28Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T17:59:28Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T17:59:50Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T17:59:55Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T17:59:55Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:00:03Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:00:03Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:00:08Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:00:08Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:00:25Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:00:30Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:00:30Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:00:52Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T18:00:57Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T18:00:57Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T18:01:03Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:01:08Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:01:08Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:01:19Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T18:01:24Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T18:01:24Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T18:01:53Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T18:01:58Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T18:01:58Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T18:02:08Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T18:02:13Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T18:02:13Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T18:02:36Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:02:41Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:02:41Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:02:48Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:02:53Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:02:53Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:03:07Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:03:07Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:03:12Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:03:12Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:03:18Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:03:23Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:03:23Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:03:29Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T18:03:34Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T18:03:34Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T18:03:37Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:03:42Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:03:42Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:03:44Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T18:03:49Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T18:03:49Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T18:04:13Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:04:18Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:04:18Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:04:21Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:04:26Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:04:26Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:04:41Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T18:04:46Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T18:04:46Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T18:05:10Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:05:15Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:05:15Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:05:34Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:05:34Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T18:05:39Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T18:05:39Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T18:05:53Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:05:58Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:05:58Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:06:14Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:06:19Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:06:19Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:06:48Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T18:06:53Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T18:06:53Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T18:07:23Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:07:28Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:07:28Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:07:37Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:07:42Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:07:42Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:08:08Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T18:08:13Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T18:08:13Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T18:08:15Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:08:20Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:08:20Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:08:29Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T18:08:34Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T18:08:34Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T18:09:04Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T18:09:04Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T18:09:09Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T18:09:09Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T18:09:10Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:09:15Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:09:15Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:09:29Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:09:34Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:09:34Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:09:56Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:10:01Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:10:01Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:10:05Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:10:10Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:10:10Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:10:36Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T18:10:41Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T18:10:41Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T18:10:54Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:10:59Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:10:59Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:11:17Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:11:22Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:11:22Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:11:48Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:11:53Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:11:53Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:12:06Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:12:06Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:12:11Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:12:11Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:12:32Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:12:37Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:12:37Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:12:49Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:12:54Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:12:54Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:13:04Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T18:13:09Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T18:13:09Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T18:13:23Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:13:28Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:13:28Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:13:49Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:13:54Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:13:54Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:14:22Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T18:14:27Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T18:14:27Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T18:14:58Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:15:03Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:15:03Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:15:15Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:15:20Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:15:20Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:15:34Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:15:34Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:15:39Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:15:39Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:15:53Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T18:15:58Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T18:15:58Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T18:16:04Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:16:09Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:16:09Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:16:38Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:16:43Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:16:43Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:16:58Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:17:03Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:17:03Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:17:20Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:17:25Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:17:25Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:17:38Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:17:43Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:17:43Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:17:44Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:17:49Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:17:49Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:18:09Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:18:14Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:18:14Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:18:29Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:18:29Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:18:34Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:18:34Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:18:58Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T18:19:03Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T18:19:03Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T18:19:21Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T18:19:26Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T18:19:26Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T18:19:29Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:19:34Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:19:34Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:19:53Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:19:58Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:19:58Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:20:18Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:20:23Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:20:23Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:20:53Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:20:58Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:20:58Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:21:29Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:21:34Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:21:34Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:21:39Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:21:44Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:21:44Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:22:00Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:22:00Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:22:05Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:22:05Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:22:06Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T18:22:11Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T18:22:11Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T18:22:15Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:22:20Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:22:20Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:22:46Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T18:22:51Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T18:22:51Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T18:22:57Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:23:02Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:23:02Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:23:07Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T18:23:12Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T18:23:12Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T18:23:41Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T18:23:46Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T18:23:46Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T18:24:11Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:24:16Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:24:16Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:24:27Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:24:32Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:24:32Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:24:57Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:24:57Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:25:02Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:25:02Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:25:18Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T18:25:23Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T18:25:23Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T18:25:28Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:25:33Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:25:33Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:25:36Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:25:41Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:25:41Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:25:50Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T18:25:55Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T18:25:55Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T18:26:07Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:26:12Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:26:12Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:26:25Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:26:30Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:26:30Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:26:49Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:26:54Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:26:54Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:26:59Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:27:04Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:27:04Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:27:32Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:27:32Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T18:27:37Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T18:27:37Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T18:28:07Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:28:12Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:28:12Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:28:25Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T18:28:30Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T18:28:30Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T18:28:50Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T18:28:55Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T18:28:55Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T18:29:07Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:29:12Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:29:12Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:29:17Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T18:29:22Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T18:29:22Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T18:29:47Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:29:52Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:29:52Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:30:13Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:30:18Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:30:18Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:30:24Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:30:29Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:30:29Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:30:32Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:30:32Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.107
+2026-04-04T18:30:37Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.107
+2026-04-04T18:30:37Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.107
+2026-04-04T18:30:51Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:30:56Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:30:56Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:31:25Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T18:31:30Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T18:31:30Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.73
+2026-04-04T18:31:58Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:32:03Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:32:03Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:32:06Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T18:32:11Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T18:32:11Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T18:32:18Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:32:23Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:32:23Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:32:37Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:32:42Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:32:42Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:33:04Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:33:09Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:33:09Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:33:33Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:33:38Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:33:38Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:33:42Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:33:42Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:33:47Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:33:47Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:34:00Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:34:05Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:34:05Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:34:31Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:34:36Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:34:36Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:35:08Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:35:13Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:35:13Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:35:17Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:35:22Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:35:22Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:35:37Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T18:35:42Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T18:35:42Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T18:36:05Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:36:10Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:36:10Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:36:20Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:36:25Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:36:25Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:36:36Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:36:41Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:36:41Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:37:00Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:37:00Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:37:05Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:37:05Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:37:29Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:37:34Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:37:34Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:37:47Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:37:52Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:37:52Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:38:19Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:38:24Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:38:24Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:38:39Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:38:44Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:38:44Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:38:51Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T18:38:56Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T18:38:56Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T18:39:24Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:39:29Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:39:29Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:39:44Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:39:49Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:39:49Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:40:16Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T18:40:21Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T18:40:21Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T18:40:37Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T18:40:37Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T18:40:42Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T18:40:42Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T18:41:09Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T18:41:14Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T18:41:14Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T18:41:34Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T18:41:39Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T18:41:39Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T18:42:02Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T18:42:07Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T18:42:07Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T18:42:27Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:42:32Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:42:32Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:42:50Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:42:55Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:42:55Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:43:22Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:43:27Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:43:27Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:43:46Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:43:51Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:43:51Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:44:07Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:44:12Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:44:12Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:44:24Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:44:24Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:44:29Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:44:29Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:44:46Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T18:44:51Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T18:44:51Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T18:45:02Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:45:07Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:45:07Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:45:36Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:45:41Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:45:41Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:45:42Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T18:45:47Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T18:45:47Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T18:46:14Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:46:19Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:46:19Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:46:33Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:46:38Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:46:38Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:47:06Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T18:47:11Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T18:47:11Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T18:47:30Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T18:47:35Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T18:47:35Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T18:48:01Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T18:48:01Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:48:06Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:48:06Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:48:06Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:48:11Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:48:11Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:48:11Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:48:16Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:48:16Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:48:38Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T18:48:43Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T18:48:43Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T18:48:50Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:48:55Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:48:55Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:49:11Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:49:16Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:49:16Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:49:46Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T18:49:51Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T18:49:51Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T18:49:51Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T18:49:56Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T18:49:56Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T18:50:16Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:50:21Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:50:21Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:50:39Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:50:39Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T18:50:44Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T18:50:44Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T18:50:45Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T18:50:50Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T18:50:50Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T18:50:55Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:51:00Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:51:00Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T18:51:29Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:51:34Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:51:34Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:51:57Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T18:52:02Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T18:52:02Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T18:52:13Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:52:18Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:52:18Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:52:26Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:52:31Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:52:31Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:52:32Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:52:37Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:52:37Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:52:53Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T18:52:58Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T18:52:58Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T18:53:24Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T18:53:24Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T18:53:29Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T18:53:29Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T18:54:01Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:54:06Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:54:06Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T18:54:28Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T18:54:33Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T18:54:33Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.77
+2026-04-04T18:54:44Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:54:49Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:54:49Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:54:54Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:54:59Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:54:59Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T18:55:17Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:55:22Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:55:22Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:55:50Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:55:55Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:55:55Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:56:14Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:56:19Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:56:19Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T18:56:43Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:56:48Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:56:48Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:57:01Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T18:57:01Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T18:57:06Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T18:57:06Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T18:57:12Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T18:57:17Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T18:57:17Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T18:57:19Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:57:24Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:57:24Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:57:51Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:57:56Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:57:56Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:58:15Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:58:20Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:58:20Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T18:58:25Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:58:30Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:58:30Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T18:58:35Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T18:58:40Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T18:58:40Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T19:45:20Z ERR Failed to refresh feature selector error="lookup cfd-features.argotunnel.com: dnsquery: Deze bewerking is geretourneerd omdat de time-outperiode verlopen is."
+2026-04-04T19:45:20Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.107
+2026-04-04T19:45:20Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: write udp [::]:64650->198.41.192.107:7844: wsasendto: Er is geprobeerd een socketbewerking uit te voeren op een onbereikbaar netwerk." connIndex=0 event=0 ip=198.41.192.107
+2026-04-04T19:45:20Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.107
+2026-04-04T20:58:48Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-04-04T20:58:48Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T20:58:48Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: write udp [::]:64650->198.41.200.33:7844: wsasendto: Er is geprobeerd een socketbewerking uit te voeren op een onbereikbare host." connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T20:58:48Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T20:58:48Z ERR Failed to refresh feature selector error="lookup cfd-features.argotunnel.com: dnsquery: Geen DNS-servers geconfigureerd voor lokaal systeem."
+2026-04-04T20:59:10Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T20:59:10Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: write udp [::]:64650->198.41.192.47:7844: wsasendto: Er is geprobeerd een socketbewerking uit te voeren op een onbereikbare host." connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T20:59:10Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T20:59:39Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T20:59:39Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: write udp [::]:64650->198.41.192.67:7844: wsasendto: Er is geprobeerd een socketbewerking uit te voeren op een onbereikbare host." connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T20:59:39Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T20:59:58Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T20:59:58Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: write udp [::]:64650->198.41.192.47:7844: wsasendto: Er is geprobeerd een socketbewerking uit te voeren op een onbereikbare host." connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T20:59:58Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:00:07Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T21:00:07Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: write udp [::]:64650->198.41.192.227:7844: wsasendto: Er is geprobeerd een socketbewerking uit te voeren op een onbereikbaar netwerk." connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T21:00:07Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T21:00:38Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T21:00:43Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T21:00:43Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T21:01:08Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T21:01:13Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T21:01:13Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T21:01:19Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.107
+2026-04-04T21:01:24Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.107
+2026-04-04T21:01:24Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.107
+2026-04-04T21:01:25Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T21:01:30Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T21:01:30Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T21:02:00Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T21:02:05Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T21:02:05Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T21:02:30Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T21:02:30Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:02:35Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:02:35Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:03:01Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T21:03:06Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T21:03:06Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T21:03:09Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T21:03:14Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T21:03:14Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T21:03:20Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T21:03:25Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T21:03:25Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T21:03:54Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:03:59Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:03:59Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:04:26Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T21:04:31Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T21:04:31Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T21:04:34Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:04:39Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:04:39Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:05:05Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T21:05:10Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T21:05:10Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T21:05:12Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:05:17Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:05:17Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:05:38Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:05:38Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T21:05:43Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T21:05:43Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T21:06:12Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:06:17Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:06:17Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:06:34Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T21:06:39Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T21:06:39Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T21:06:42Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T21:06:47Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T21:06:47Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T21:07:09Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:07:14Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:07:14Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:07:28Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T21:07:33Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T21:07:33Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T21:07:40Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:07:45Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:07:45Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:08:10Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T21:08:15Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T21:08:15Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T21:08:38Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:08:43Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:08:43Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:08:51Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:08:51Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T21:08:56Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T21:08:56Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T21:09:14Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T21:09:19Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T21:09:19Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T21:09:24Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T21:09:29Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T21:09:29Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T21:09:56Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T21:10:01Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T21:10:01Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T21:10:26Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T21:10:31Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T21:10:31Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T21:10:59Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.107
+2026-04-04T21:11:04Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.107
+2026-04-04T21:11:04Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.107
+2026-04-04T21:11:33Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T21:11:38Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T21:11:38Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T21:11:45Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T21:11:50Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T21:11:50Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T21:12:05Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T21:12:10Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T21:12:10Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T21:12:17Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T21:12:17Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T21:12:22Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T21:12:22Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T21:12:23Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T21:12:28Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T21:12:28Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T21:12:53Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:12:58Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:12:58Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:13:15Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T21:13:20Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T21:13:20Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T21:13:50Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T21:13:53Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-04-04T21:13:55Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T21:13:55Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T21:13:56Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T21:14:01Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T21:14:01Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T21:14:22Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T21:14:27Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T21:14:27Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T21:14:48Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T21:14:53Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T21:14:53Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T21:15:17Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T21:15:22Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T21:15:22Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T21:15:40Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T21:15:40Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:15:45Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:15:45Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:15:49Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T21:15:54Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T21:15:54Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T21:16:07Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T21:16:12Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T21:16:12Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T21:16:17Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T21:16:22Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T21:16:22Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T21:16:23Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T21:16:28Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T21:16:28Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T21:16:30Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T21:16:35Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T21:16:35Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.27
+2026-04-04T21:16:51Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T21:16:56Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T21:16:56Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T21:17:00Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T21:17:05Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T21:17:05Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T21:17:27Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T21:17:32Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T21:17:32Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T21:17:37Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T21:17:37Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T21:17:42Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T21:17:42Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T21:18:08Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T21:18:13Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T21:18:13Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.53
+2026-04-04T21:18:26Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T21:18:31Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T21:18:31Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T21:18:51Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.107
+2026-04-04T21:18:56Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.107
+2026-04-04T21:18:56Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.107
+2026-04-04T21:19:14Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T21:19:19Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T21:19:19Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T21:19:20Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:19:25Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:19:25Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:19:56Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T21:20:01Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T21:20:01Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.23
+2026-04-04T21:20:23Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T21:20:28Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T21:20:28Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T21:20:29Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T21:20:34Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T21:20:34Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T21:21:06Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T21:21:06Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T21:21:11Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T21:21:11Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.113
+2026-04-04T21:21:23Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T21:21:28Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T21:21:28Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T21:21:45Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:21:50Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:21:50Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:21:56Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T21:22:01Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T21:22:01Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T21:22:04Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:22:09Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:22:09Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:22:37Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T21:22:42Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T21:22:42Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.57
+2026-04-04T21:22:42Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T21:22:47Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T21:22:47Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.233
+2026-04-04T21:23:11Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T21:23:16Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T21:23:16Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.227
+2026-04-04T21:23:27Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T21:23:32Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T21:23:32Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T21:23:45Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.192.7
+2026-04-04T21:23:45Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T21:23:50Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T21:23:50Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T21:24:04Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T21:24:09Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T21:24:09Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.13
+2026-04-04T21:24:23Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T21:24:28Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T21:24:28Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T21:24:43Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T21:24:48Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T21:24:48Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.33
+2026-04-04T21:25:03Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T21:25:08Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T21:25:08Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-04T21:25:36Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:25:41Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:25:41Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:25:41Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T21:25:46Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T21:25:46Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T21:25:53Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T21:25:58Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T21:25:58Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T21:26:13Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T21:26:18Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T21:26:18Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T21:26:23Z WRN If this log occurs persistently, and cloudflared is unable to connect to Cloudflare Network with `quic` protocol, then most likely your machine/network is getting its egress UDP to port 7844 (or others) blocked or dropped. Make sure to allow egress connectivity as per https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ports-and-ips/
+If you are using private routing to this Tunnel, then ICMP, UDP (and Private DNS Resolution) will not work unless your cloudflared can connect with Cloudflare Network with `quic`. connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T21:26:23Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T21:26:28Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T21:26:28Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T21:26:45Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:26:50Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:26:50Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-04T21:27:02Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T21:27:07Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T21:27:07Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.63
+2026-04-04T21:27:18Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T21:27:23Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T21:27:23Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.67
+2026-04-04T21:27:44Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T21:27:49Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T21:27:49Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.43
+2026-04-04T21:28:18Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T21:28:23Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T21:28:23Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.37
+2026-04-04T23:08:20Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T23:08:20Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: write udp [::]:64650->198.41.192.167:7844: wsasendto: Er is geprobeerd een socketbewerking uit te voeren op een onbereikbaar netwerk." connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T23:08:20Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.167
+2026-04-04T23:08:20Z ERR Failed to refresh feature selector error="lookup cfd-features.argotunnel.com: dnsquery: Geen DNS-servers geconfigureerd voor lokaal systeem."
+2026-04-05T07:27:11Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-05T07:27:11Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-04-05T07:27:11Z ERR Failed to refresh feature selector error="lookup cfd-features.argotunnel.com: dnsquery: Geen DNS-servers geconfigureerd voor lokaal systeem."
+2026-04-05T07:27:11Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: write udp [::]:64650->198.41.200.193:7844: wsasendto: Er is geprobeerd een socketbewerking uit te voeren op een onbereikbare host." connIndex=0 event=0 ip=198.41.200.193
+2026-04-05T07:27:11Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-05T07:27:19Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2026-04-05T07:27:19Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: write udp [::]:64650->198.41.192.47:7844: wsasendto: Er is geprobeerd een socketbewerking uit te voeren op een onbereikbare host." connIndex=0 event=0 ip=198.41.192.47
+2026-04-05T07:27:19Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.192.47
+2026-04-05T07:27:30Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.63
+2026-04-05T07:27:30Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: write udp [::]:64650->198.41.200.63:7844: wsasendto: Er is geprobeerd een socketbewerking uit te voeren op een onbereikbare host." connIndex=0 event=0 ip=198.41.200.63
+2026-04-05T07:27:30Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.63
+2026-04-05T07:27:46Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.13
+2026-04-05T07:27:51Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.13
+2026-04-05T07:27:51Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.13
+2026-04-05T07:27:55Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.193
+2026-04-05T07:28:00Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.193
+2026-04-05T07:28:00Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.193
+2026-04-05T07:28:17Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.233
+2026-04-05T07:28:22Z ERR Failed to dial a quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.233
+2026-04-05T07:28:22Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.233
+2026-04-05T07:28:34Z INF Initiating graceful shutdown due to signal terminated ...
+2026-04-05T07:28:34Z INF Tunnel server stopped
+2026-04-05T07:28:34Z INF Metrics server stopped

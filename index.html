@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5efe4">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Hoofdpijn Dagboek">
+  <title>Hoofdpijn Dagboek</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <p class="eyebrow">Hoofdpijn Dagboek</p>
+      <h1>Hoofdpijn Dagboek</h1>
+      <p class="hero-copy">
+        Een rustige app-flow om snel vast te leggen hoe je je voelt.
+      </p>
+      <div class="hero-stats" aria-label="Samenvatting">
+        <article>
+          <p class="stat-label">Totaal</p>
+          <span id="total-entries">0</span>
+          <p>registraties</p>
+        </article>
+        <article>
+          <p class="stat-label">Gemiddeld</p>
+          <span id="average-pain">0.0</span>
+          <p>gemiddelde pijn</p>
+        </article>
+      </div>
+    </header>
+
+    <main class="content-grid">
+      <section class="panel form-panel">
+        <div class="panel-heading">
+          <p class="eyebrow">Nieuwe registratie</p>
+          <h2>Scroll door de stappen</h2>
+        </div>
+
+        <form id="entry-form" class="entry-form">
+          <section class="form-screen screen-primary">
+            <div class="screen-copy">
+              <p class="screen-step">Stap 1</p>
+              <h3>Wanneer begon het en hoe sterk was de pijn?</h3>
+            </div>
+
+            <label>
+              Datum
+              <input type="date" id="entry-date" name="date" required>
+            </label>
+
+            <label>
+              Tijd
+              <input type="time" id="entry-time" name="time" required>
+            </label>
+
+            <label class="range-group">
+              Pijnscore
+              <div class="range-card">
+                <strong id="pain-display">5</strong>
+                <span>op 10</span>
+              </div>
+              <input type="range" id="pain-level" name="painLevel" min="0" max="10" value="5">
+            </label>
+          </section>
+
+          <section class="form-screen">
+            <div class="screen-copy">
+              <p class="screen-step">Stap 2</p>
+              <h3>Hoe lang duurde het en wat speelde mogelijk mee?</h3>
+            </div>
+
+            <label>
+              Duur
+              <select id="duration" name="duration">
+                <option value="Korter dan 30 minuten">Korter dan 30 minuten</option>
+                <option value="30 minuten tot 2 uur">30 minuten tot 2 uur</option>
+                <option value="2 tot 6 uur">2 tot 6 uur</option>
+                <option value="Langer dan 6 uur">Langer dan 6 uur</option>
+              </select>
+            </label>
+
+            <fieldset>
+              <legend>Triggers</legend>
+              <div class="chip-grid">
+                <label class="chip"><input type="checkbox" name="triggers" value="Stress">Stress</label>
+                <label class="chip"><input type="checkbox" name="triggers" value="Te weinig slaap">Te weinig slaap</label>
+                <label class="chip"><input type="checkbox" name="triggers" value="Schermtijd">Schermtijd</label>
+                <label class="chip"><input type="checkbox" name="triggers" value="Te weinig water">Te weinig water</label>
+                <label class="chip"><input type="checkbox" name="triggers" value="Cafeine">Cafeine</label>
+                <label class="chip"><input type="checkbox" name="triggers" value="Voeding">Voeding</label>
+              </div>
+            </fieldset>
+          </section>
+
+          <section class="form-screen">
+            <div class="screen-copy">
+              <p class="screen-step">Stap 3</p>
+              <h3>Voeg nog wat extra context toe.</h3>
+            </div>
+
+            <fieldset>
+              <legend>Symptomen</legend>
+              <div class="chip-grid">
+                <label class="chip"><input type="checkbox" name="symptoms" value="Misselijkheid">Misselijkheid</label>
+                <label class="chip"><input type="checkbox" name="symptoms" value="Lichtgevoelig">Lichtgevoelig</label>
+                <label class="chip"><input type="checkbox" name="symptoms" value="Geluidgevoelig">Geluidgevoelig</label>
+                <label class="chip"><input type="checkbox" name="symptoms" value="Druk achter ogen">Druk achter ogen</label>
+                <label class="chip"><input type="checkbox" name="symptoms" value="Aura">Aura</label>
+                <label class="chip"><input type="checkbox" name="symptoms" value="Nekpijn">Nekpijn</label>
+              </div>
+            </fieldset>
+
+            <label>
+              Medicatie of aanpak
+              <input type="text" id="medication" name="medication" placeholder="Bijv. paracetamol, rust, water">
+            </label>
+
+            <label>
+              Extra notities
+              <textarea id="notes" name="notes" rows="5" placeholder="Wat gebeurde er rond deze klacht?"></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button type="submit" class="primary-button">Opslaan</button>
+              <button type="button" id="cancel-edit" class="secondary-button" hidden>Annuleren</button>
+            </div>
+          </section>
+        </form>
+      </section>
+
+      <section class="panel overview-panel">
+        <div class="panel-heading">
+          <p class="eyebrow">Overzicht</p>
+          <h2>Recente registraties</h2>
+        </div>
+
+        <div class="insight-card">
+          <p class="insight-label">Meest gekozen trigger</p>
+          <strong id="top-trigger">Nog geen data</strong>
+        </div>
+
+        <div id="entries-list" class="entries-list" aria-live="polite"></div>
+      </section>
+    </main>
+  </div>
+
+  <template id="entry-template">
+    <article class="entry-card">
+      <div class="entry-header">
+        <div>
+          <h3 class="entry-datetime"></h3>
+          <p class="entry-duration"></p>
+        </div>
+        <span class="pain-badge"></span>
+      </div>
+      <p class="entry-meta triggers-line"></p>
+      <p class="entry-meta symptoms-line"></p>
+      <p class="entry-meta medication-line"></p>
+      <p class="entry-notes"></p>
+      <div class="entry-actions">
+        <button type="button" class="ghost-button edit-entry">Bewerken</button>
+        <button type="button" class="ghost-button delete-entry">Verwijderen</button>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
