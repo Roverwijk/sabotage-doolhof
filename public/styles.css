@@ -88,6 +88,42 @@ button {
   line-height: 1.45;
 }
 
+.countdown-scores {
+  margin-top: 16px;
+  display: grid;
+  gap: 8px;
+  text-align: left;
+}
+
+.countdown-score-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: #f6f4ed;
+  border: 1px solid var(--line);
+}
+
+.countdown-score-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.countdown-score-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+}
+
+.countdown-score-value {
+  color: var(--muted);
+  font-weight: 600;
+}
+
 .hero-panel,
 .panel,
 .card,

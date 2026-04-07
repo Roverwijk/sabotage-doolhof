@@ -30,7 +30,8 @@ const ICONS = {
 
 const MOVE_INTERVAL_MS = 180;
 const EFFECT_IMMUNITY_MS = 1800;
-const WIN_SCORE = 3;
+const MAZE_TARGET_SCORE = 3;
+const GAME_WIN_SCORE = 10;
 const START_COUNTDOWN_MS = 4000;
 const MAZE_BREAK_MS = 3000;
 const WORLD_ACTION_LOCK_BUFFER_MS = 1200;
@@ -511,7 +512,7 @@ function expireEffects() {
   if (room.phase === "countdown" && room.countdownEndsAt && Date.now() >= room.countdownEndsAt) {
     room.phase = "playing";
     room.countdownEndsAt = 0;
-    room.message = `Round ${room.round} is live. Race to 3 goals.`;
+    room.message = `Maze ${room.round} is live. Score together to ${MAZE_TARGET_SCORE}, first to ${GAME_WIN_SCORE} wins.`;
     changed = true;
   }
 
@@ -551,11 +552,25 @@ function maybeScore(player) {
   player.immunityUntil = 0;
   room.message = `${player.name} scoort en heeft nu ${player.score} punten.`;
 
-  if (player.mazeScore >= WIN_SCORE) {
+  if (player.score >= GAME_WIN_SCORE) {
+    clearTimer("countdown");
+    clearTimer("roundReset");
     room.winnerId = player.id;
+    room.phase = "gameover";
+    room.roundResetAt = 0;
+    room.countdownEndsAt = 0;
+    room.worldActionLockUntil = 0;
+    room.gatesOpenUntil = 0;
+    room.message = `${player.name} wint het spel met ${GAME_WIN_SCORE} punten.`;
+    sendState();
+    return;
+  }
+
+  const mazeTotalScore = room.players.reduce((sum, entry) => sum + entry.mazeScore, 0);
+  if (mazeTotalScore >= MAZE_TARGET_SCORE) {
     room.phase = "intermission";
     room.roundResetAt = Date.now() + MAZE_BREAK_MS;
-    room.message = `${player.name} haalt 3 doelen. Nieuwe maze komt eraan.`;
+    room.message = `Tussenstand! Samen zijn er ${MAZE_TARGET_SCORE} punten gescoord. Nieuwe maze komt eraan.`;
     scheduleRoundReset();
     sendState();
     return;
@@ -568,7 +583,6 @@ function startNextRound() {
   clearTimer("countdown");
   clearTimer("roundReset");
   room.round += 1;
-  room.winnerId = null;
   room.roundResetAt = 0;
   room.phase = "playing";
   room.countdownEndsAt = 0;
@@ -594,7 +608,7 @@ function startNextRound() {
   });
   assignGoals();
   room.message = room.players.length >= 2
-    ? `Nieuwe maze gestart. Ga door in ronde ${room.round}.`
+    ? `Nieuwe maze gestart. Samen naar ${MAZE_TARGET_SCORE}, individueel naar ${GAME_WIN_SCORE}.`
     : "Waiting for players";
   sendState();
 }
@@ -691,7 +705,7 @@ function scheduleCountdownStart() {
 
     room.phase = "playing";
     room.countdownEndsAt = 0;
-    room.message = `Round ${room.round} is live. Race to 3 goals.`;
+    room.message = `Maze ${room.round} is live. Score together to ${MAZE_TARGET_SCORE}, first to ${GAME_WIN_SCORE} wins.`;
     sendState();
   }, START_COUNTDOWN_MS);
 }
@@ -705,7 +719,7 @@ function scheduleRoundReset() {
       return;
     }
     startNextRound();
-  }, 2200);
+  }, MAZE_BREAK_MS);
 }
 
 function clearTimer(timerName) {

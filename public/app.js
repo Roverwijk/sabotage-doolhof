@@ -30,6 +30,7 @@ const elements = {
   countdownOverlayLabel: document.getElementById("countdown-overlay-label"),
   countdownOverlayNumber: document.getElementById("countdown-overlay-number"),
   countdownOverlayCopy: document.getElementById("countdown-overlay-copy"),
+  countdownOverlayScores: document.getElementById("countdown-overlay-scores"),
   lobbyBanner: document.getElementById("lobby-banner"),
   lobbyTitle: document.getElementById("lobby-title"),
   lobbyCopy: document.getElementById("lobby-copy"),
@@ -294,15 +295,15 @@ function render() {
   renderLobby(room);
   renderLobbyPlayers(room);
   renderBoard(room);
-  renderScoreboard(room);
-  renderSelf(room);
+  renderScoreboardV2(room);
+  renderSelfV2(room);
   renderSabotage(room);
 }
 
 function renderCountdown(room) {
   window.clearInterval(countdownIntervalId);
 
-  if (!room.countdownEndsAt && !room.roundResetAt) {
+  if ((!room.countdownEndsAt && !room.roundResetAt) || room.phase === "gameover") {
     elements.countdownLabel.textContent = "";
     return;
   }
@@ -331,10 +332,24 @@ function renderCountdown(room) {
 function renderCountdownOverlay(room) {
   const hasStartCountdown = room.phase === "countdown" && room.countdownInMs > 0;
   const hasMazeCountdown = room.phase === "intermission" && room.resetInMs > 0;
-  const visible = hasStartCountdown || hasMazeCountdown;
+  const hasWinnerOverlay = room.phase === "gameover" && room.winnerId;
+  const visible = hasStartCountdown || hasMazeCountdown || hasWinnerOverlay;
 
   elements.countdownOverlay.classList.toggle("hidden", !visible);
   if (!visible) {
+    window.clearInterval(overlayIntervalId);
+    overlayLastSecond = null;
+    elements.countdownOverlayScores.classList.add("hidden");
+    elements.countdownOverlayScores.innerHTML = "";
+    return;
+  }
+
+  if (hasWinnerOverlay) {
+    const winner = room.players.find((player) => player.id === room.winnerId);
+    elements.countdownOverlayLabel.textContent = "Winnaar";
+    elements.countdownOverlayNumber.textContent = winner?.name || "Speler";
+    elements.countdownOverlayCopy.textContent = `${winner?.score || 10} punten gehaald.`;
+    renderOverlayScores(room, true);
     window.clearInterval(overlayIntervalId);
     overlayLastSecond = null;
     return;
@@ -343,9 +358,12 @@ function renderCountdownOverlay(room) {
   if (hasStartCountdown) {
     elements.countdownOverlayLabel.textContent = "Start";
     elements.countdownOverlayCopy.textContent = "De ronde begint zo.";
+    elements.countdownOverlayScores.classList.add("hidden");
+    elements.countdownOverlayScores.innerHTML = "";
   } else {
-    elements.countdownOverlayLabel.textContent = "Nieuwe maze";
-    elements.countdownOverlayCopy.textContent = "Even pauze. De volgende maze komt eraan.";
+    elements.countdownOverlayLabel.textContent = "Tussenstand";
+    elements.countdownOverlayCopy.textContent = "Samen zijn er 3 punten gescoord. Nieuwe maze komt eraan.";
+    renderOverlayScores(room, false);
   }
 
   const renderOverlayTick = () => {
@@ -385,9 +403,13 @@ function renderLobby(room) {
     return;
   }
 
-  if (room.phase === "intermission") {
-    elements.lobbyTitle.textContent = "Nieuwe maze komt eraan";
-    elements.lobbyCopy.textContent = "Even pauze. Na het aftellen verschijnt automatisch een nieuwe maze.";
+  if (room.phase === "gameover") {
+    const winner = room.players.find((player) => player.id === room.winnerId);
+    elements.lobbyTitle.textContent = `${winner?.name || "Speler"} wint het spel`;
+    elements.lobbyCopy.textContent = "De eindstand staat hieronder. Gebruik 'Stop spel' om terug te gaan naar de lobby.";
+  } else if (room.phase === "intermission") {
+    elements.lobbyTitle.textContent = "Tussenstand";
+    elements.lobbyCopy.textContent = "Er zijn samen 3 punten gescoord. Na het aftellen start automatisch een nieuwe maze.";
   } else if (room.phase === "countdown") {
     elements.lobbyTitle.textContent = "Ronde start bijna";
     elements.lobbyCopy.textContent = "Na het aftellen verschijnt het doolhof op het laptopscherm.";
@@ -685,6 +707,97 @@ function getActionPrompt(actionLabel) {
   return actionLabel;
 }
 
+function renderScoreboardV2(room) {
+  elements.scoreboard.innerHTML = "";
+
+  room.players
+    .slice()
+    .sort((left, right) => right.score - left.score)
+    .forEach((player) => {
+      const fragment = elements.scoreTemplate.content.cloneNode(true);
+      const row = fragment.querySelector(".score-row");
+      fragment.querySelector(".score-color").style.background = player.colorHex;
+      fragment.querySelector(".score-name").textContent = player.name;
+      fragment.querySelector(".score-meta").textContent = `${player.score} punten`;
+      fragment.querySelector(".score-goals").textContent = `${player.score} totaal • ${player.mazeScore}/3 deze maze`;
+      fragment.querySelector(".score-effect").textContent = player.activeEffect
+        ? `${player.activeEffect.label} ${Math.ceil(player.effectRemainingMs / 1000)}s`
+        : player.immunityRemainingMs > 0
+          ? `Immuun ${Math.ceil(player.immunityRemainingMs / 1000)}s`
+          : room.winnerId === player.id && room.phase === "gameover"
+            ? "Winnaar"
+            : "Geen effect";
+
+      if (player.id === state.selfPlayerId) {
+        row.classList.add("is-self");
+      }
+
+      elements.scoreboard.append(fragment);
+    });
+}
+
+function renderSelfV2(room) {
+  if (state.mode === "dashboard") {
+    elements.selfSummary.innerHTML = "<strong>Gedeeld scherm</strong><span>Start hier de ronde en gebruik dit scherm als spelbord.</span>";
+    elements.pointsPill.textContent = "--";
+    elements.pointsPill.classList.remove("is-active");
+    elements.controllerScorePill.textContent = "--";
+    return;
+  }
+
+  const self = room.players.find((player) => player.id === state.selfPlayerId);
+  if (!self) {
+    elements.selfSummary.innerHTML = "<strong>Nog niet in de lobby</strong><span>Vul je naam in en doe mee.</span>";
+    elements.pointsPill.textContent = "0 punten";
+    elements.pointsPill.classList.remove("is-active");
+    elements.controllerScorePill.textContent = "0/3";
+    elements.controllerHelper.textContent = "Vul je naam in en ga de lobby in.";
+    return;
+  }
+
+  const teamMazeScore = room.players.reduce((sum, player) => sum + player.mazeScore, 0);
+  const helperText = self.activeEffect
+    ? `${self.activeEffect.label} ${Math.ceil(self.effectRemainingMs / 1000)}s`
+    : room.phase === "playing"
+      ? "Gebruik de pijlen om te bewegen."
+      : room.phase === "intermission"
+        ? "Tussenstand. Nieuwe maze komt eraan."
+        : room.phase === "gameover"
+          ? "Het spel is klaar."
+          : "Wachten op start.";
+
+  elements.selfSummary.innerHTML = `
+    <strong style="color:${self.colorHex}">${self.name}</strong>
+    <span>${capitalize(self.colorId)} speler</span>
+    <span>${self.score} totaal • jij ${self.mazeScore}/3 • samen ${teamMazeScore}/3</span>
+    <span>${helperText}</span>
+  `;
+  elements.pointsPill.textContent = `${self.score} punten`;
+  elements.pointsPill.classList.toggle("is-active", self.score > 0);
+  elements.controllerScorePill.textContent = `${self.score}`;
+  elements.controllerHelper.textContent = room.phase === "playing"
+    ? "Houd een knop vast om door te bewegen."
+    : room.phase === "intermission"
+      ? "Even wachten. De nieuwe maze start automatisch."
+      : room.phase === "gameover"
+        ? "Het spel is afgelopen."
+        : "Wacht tot de laptop de ronde start.";
+}
+
+function renderOverlayScores(room, isFinal) {
+  const orderedPlayers = room.players.slice().sort((left, right) => right.score - left.score);
+  elements.countdownOverlayScores.classList.remove("hidden");
+  elements.countdownOverlayScores.innerHTML = orderedPlayers.map((player) => `
+    <div class="countdown-score-row">
+      <span class="countdown-score-name">
+        <span class="countdown-score-dot" style="background:${player.colorHex}"></span>
+        ${player.name}
+      </span>
+      <span class="countdown-score-value">${player.score} totaal${isFinal ? "" : ` • ${player.mazeScore}/3 deze maze`}</span>
+    </div>
+  `).join("");
+}
+
 function handleRoomSounds(previousRoom, nextRoom) {
   if (state.mode !== "dashboard" || !previousRoom || !nextRoom) {
     return;
@@ -712,6 +825,10 @@ function handleRoomSounds(previousRoom, nextRoom) {
 
   if (previousRoom.phase !== "playing" && nextRoom.phase === "playing") {
     playSound("start");
+  }
+
+  if (!previousRoom.winnerId && nextRoom.winnerId && nextRoom.phase === "gameover") {
+    playSound("winner");
   }
 }
 
@@ -772,6 +889,13 @@ function playSound(kind) {
   if (kind === "start") {
     playTone(context, now, 440, 0.08, "triangle", 0.05);
     playTone(context, now + 0.08, 660, 0.18, "triangle", 0.05);
+    return;
+  }
+
+  if (kind === "winner") {
+    playTone(context, now, 523.25, 0.12, "triangle", 0.06);
+    playTone(context, now + 0.12, 659.25, 0.14, "triangle", 0.06);
+    playTone(context, now + 0.26, 783.99, 0.22, "triangle", 0.07);
   }
 }
 
