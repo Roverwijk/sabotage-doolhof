@@ -18,13 +18,13 @@ const COLORS = [
 
 const EFFECT_DEFS = {
   maze: { label: "Shift maze + doelen", durationMs: 0, cooldownMs: 40000, scope: "world" },
-  swap: { label: "Wereld-besturing", durationMs: 10000, cooldownMs: 40000, scope: "world" },
-  freeze: { label: "Bevries speler", durationMs: 5000, cooldownMs: 40000, scope: "personal" }
+  gates: { label: "Open Gates", durationMs: 10000, cooldownMs: 40000, scope: "world" },
+  freeze: { label: "Bevries speler", durationMs: 10000, cooldownMs: 40000, scope: "personal" }
 };
 
 const ICONS = {
   maze: "M",
-  swap: "LR",
+  gates: "G",
   freeze: "F"
 };
 
@@ -152,7 +152,8 @@ function createRoomState() {
     winnerId: null,
     roundResetAt: 0,
     countdownEndsAt: 0,
-    worldActionLockUntil: 0
+    worldActionLockUntil: 0,
+    gatesOpenUntil: 0
   };
 }
 
@@ -235,7 +236,7 @@ function createPlayer(rawName, color) {
     immunityUntil: 0,
     cooldowns: {
       maze: 0,
-      swap: 0,
+      gates: 0,
       freeze: 0
     },
     moveLockedUntil: 0,
@@ -268,6 +269,7 @@ function handleDisconnect(client) {
       room.roundResetAt = 0;
       room.countdownEndsAt = 0;
       room.worldActionLockUntil = 0;
+      room.gatesOpenUntil = 0;
       room.message = "Waiting for players";
     } else {
       assignGoals();
@@ -300,6 +302,7 @@ function handleStartGame(client) {
   room.phase = "countdown";
   room.countdownEndsAt = Date.now() + START_COUNTDOWN_MS;
   room.worldActionLockUntil = 0;
+  room.gatesOpenUntil = 0;
   room.message = "Get ready. Round starts soon.";
   room.players.forEach((player) => {
     player.position = { ...player.start };
@@ -340,7 +343,7 @@ function handleStopGame(client) {
     player.moveLockedUntil = 0;
     player.cooldowns = {
       maze: Date.now() + ACTION_CHARGE_MS,
-      swap: Date.now() + ACTION_CHARGE_MS,
+      gates: Date.now() + ACTION_CHARGE_MS,
       freeze: Date.now() + ACTION_CHARGE_MS
     };
     player.lastMoveAt = 0;
@@ -391,7 +394,7 @@ function attemptMove(playerId, rawDirection) {
     return;
   }
 
-  const nextPosition = getNextPosition(player.position, direction);
+  const nextPosition = getNextPosition(player.position, direction, room.maze, areGatesOpen());
   if (!nextPosition || room.maze.grid[nextPosition.y]?.[nextPosition.x] !== 0) {
     return;
   }
@@ -450,13 +453,9 @@ function handleWorldAction(source, actionId) {
   setSharedCooldowns(source, effect.cooldownMs);
   room.worldActionLockUntil = Date.now() + Math.max(effect.durationMs, WORLD_ACTION_LOCK_BUFFER_MS);
 
-  if (actionId === "swap") {
-    room.players.forEach((player) => {
-      if (player.id !== source.id) {
-        applyEffect(player, "swap");
-      }
-    });
-    room.message = `${source.name} draait de besturing van alle andere spelers om.`;
+  if (actionId === "gates") {
+    room.gatesOpenUntil = Date.now() + effect.durationMs;
+    room.message = `${source.name} opent de poorten voor iedereen.`;
     sendState();
     return;
   }
@@ -516,6 +515,11 @@ function expireEffects() {
     changed = true;
   }
 
+  if (room.gatesOpenUntil && Date.now() >= room.gatesOpenUntil) {
+    room.gatesOpenUntil = 0;
+    changed = true;
+  }
+
   room.players.forEach((player) => {
     if (player.activeEffect && Date.now() >= player.effectEndsAt) {
       player.activeEffect = null;
@@ -569,6 +573,7 @@ function startNextRound() {
   room.phase = "playing";
   room.countdownEndsAt = 0;
   room.worldActionLockUntil = 0;
+  room.gatesOpenUntil = 0;
   room.maze = generateMaze(MAZE_WIDTH, MAZE_HEIGHT);
   room.players.forEach((player) => {
     player.position = { ...player.start };
@@ -580,7 +585,7 @@ function startNextRound() {
     player.moveLockedUntil = 0;
     player.cooldowns = {
       maze: Date.now() + ACTION_CHARGE_MS,
-      swap: Date.now() + ACTION_CHARGE_MS,
+      gates: Date.now() + ACTION_CHARGE_MS,
       freeze: Date.now() + ACTION_CHARGE_MS
     };
     player.lastMoveAt = 0;
@@ -644,6 +649,7 @@ function serializeRoom() {
     countdownEndsAt: room.countdownEndsAt || 0,
     roundResetAt: room.roundResetAt || 0,
     worldActionLockRemainingMs: Math.max(0, (room.worldActionLockUntil || 0) - Date.now()),
+    gatesOpenRemainingMs: Math.max(0, (room.gatesOpenUntil || 0) - Date.now()),
     resetInMs: room.roundResetAt ? Math.max(0, room.roundResetAt - Date.now()) : 0,
     countdownInMs: room.countdownEndsAt ? Math.max(0, room.countdownEndsAt - Date.now()) : 0,
     minPlayersReady: room.players.length >= 2,
@@ -657,7 +663,7 @@ function serializeRoom() {
       mazeScore: player.mazeScore,
         cooldowns: {
           maze: Math.max(0, (player.cooldowns.maze || 0) - Date.now()),
-          swap: Math.max(0, (player.cooldowns.swap || 0) - Date.now()),
+          gates: Math.max(0, (player.cooldowns.gates || 0) - Date.now()),
           freeze: Math.max(0, (player.cooldowns.freeze || 0) - Date.now())
         },
       goal: player.goal,
@@ -722,6 +728,7 @@ function generateMaze(width, height) {
     { x: 1, y: height - 2 },
     { x: width - 2, y: height - 2 }
   ];
+  const portals = buildPortals(width, height);
 
   starts.forEach((start) => {
     grid[start.y][start.x] = 0;
@@ -729,11 +736,13 @@ function generateMaze(width, height) {
 
   carveFrom(grid, 1, 1);
   starts.forEach((start) => forceOpen(grid, start.x, start.y));
+  primePortalEntries(grid, portals);
 
   return {
     width,
     height,
     grid,
+    portals,
     goalCandidates: buildGoalCandidates(grid, starts)
   };
 }
@@ -819,20 +828,91 @@ function buildGoalCandidates(grid, starts) {
   return shuffle(pool).slice(0, Math.min(6, Math.max(4, pool.length)));
 }
 
-function getNextPosition(position, direction) {
+function getNextPosition(position, direction, maze, gatesOpen) {
+  const { width, height, portals } = maze;
+  const portalTravel = getPortalTravel(position, direction, portals, gatesOpen);
+  if (portalTravel) {
+    return portalTravel;
+  }
+
   if (direction === "up") {
-    return { x: position.x, y: position.y - 1 };
+    return position.y > 0 ? { x: position.x, y: position.y - 1 } : null;
   }
   if (direction === "down") {
-    return { x: position.x, y: position.y + 1 };
+    return position.y < height - 1 ? { x: position.x, y: position.y + 1 } : null;
   }
   if (direction === "left") {
-    return { x: position.x - 1, y: position.y };
+    return position.x > 0 ? { x: position.x - 1, y: position.y } : null;
   }
   if (direction === "right") {
-    return { x: position.x + 1, y: position.y };
+    return position.x < width - 1 ? { x: position.x + 1, y: position.y } : null;
   }
   return null;
+}
+
+function buildPortals(width, height) {
+  const middleOddX = width % 2 === 0 ? width / 2 - 1 : Math.floor(width / 2);
+  const middleOddY = height % 2 === 0 ? height / 2 - 1 : Math.floor(height / 2);
+  const portalX = middleOddX % 2 === 0 ? middleOddX - 1 : middleOddX;
+  const portalY = middleOddY % 2 === 0 ? middleOddY - 1 : middleOddY;
+
+  return {
+    left: { x: 0, y: portalY },
+    right: { x: width - 1, y: portalY },
+    top: { x: portalX, y: 0 },
+    bottom: { x: portalX, y: height - 1 }
+  };
+}
+
+function primePortalEntries(grid, portals) {
+  grid[portals.left.y][portals.left.x + 1] = 0;
+  grid[portals.right.y][portals.right.x - 1] = 0;
+  grid[portals.top.y + 1][portals.top.x] = 0;
+  grid[portals.bottom.y - 1][portals.bottom.x] = 0;
+}
+
+function getPortalTravel(position, direction, portals, gatesOpen) {
+  if (!gatesOpen) {
+    return null;
+  }
+
+  if (
+    direction === "left" &&
+    position.x === portals.left.x + 1 &&
+    position.y === portals.left.y
+  ) {
+    return { x: portals.right.x - 1, y: portals.right.y };
+  }
+
+  if (
+    direction === "right" &&
+    position.x === portals.right.x - 1 &&
+    position.y === portals.right.y
+  ) {
+    return { x: portals.left.x + 1, y: portals.left.y };
+  }
+
+  if (
+    direction === "up" &&
+    position.x === portals.top.x &&
+    position.y === portals.top.y + 1
+  ) {
+    return { x: portals.bottom.x, y: portals.bottom.y - 1 };
+  }
+
+  if (
+    direction === "down" &&
+    position.x === portals.bottom.x &&
+    position.y === portals.bottom.y - 1
+  ) {
+    return { x: portals.top.x, y: portals.top.y + 1 };
+  }
+
+  return null;
+}
+
+function areGatesOpen() {
+  return Date.now() < (room.gatesOpenUntil || 0);
 }
 
 function getPlayer(playerId) {

@@ -1,6 +1,6 @@
 const ACTIONS = {
   maze: { id: "maze", label: "Shuffle", subtitle: "Maze + doelen", type: "world" },
-  swap: { id: "swap", label: "Inverse", subtitle: "Knoppen omdraaien", type: "world" },
+  gates: { id: "gates", label: "Open Gates", subtitle: "Poorten 10s open", type: "world" },
   freeze: { id: "freeze", label: "Freeze", subtitle: "Bevries speler", type: "personal" }
 };
 
@@ -34,7 +34,7 @@ const elements = {
     right: document.querySelector('[data-direction="right"] .pad-title')
   },
   mazeAction: document.getElementById("maze-action"),
-  swapAction: document.getElementById("swap-action"),
+  gatesAction: document.getElementById("gates-action"),
   freezeActions: [
     document.getElementById("freeze-action-0"),
     document.getElementById("freeze-action-1"),
@@ -186,7 +186,7 @@ function sendInput(direction) {
 
   socket.send(JSON.stringify({
     type: "input",
-    direction: getEffectiveDirection(direction)
+    direction
   }));
 }
 
@@ -294,7 +294,7 @@ function renderCountdownOverlay(room) {
 }
 
 function wireActionButtons() {
-  [elements.mazeAction, elements.swapAction, ...elements.freezeActions].forEach((button) => {
+  [elements.mazeAction, elements.gatesAction, ...elements.freezeActions].forEach((button) => {
     button.addEventListener("pointerdown", (event) => {
       event.preventDefault();
       if (socket.readyState !== WebSocket.OPEN || button.disabled) {
@@ -315,7 +315,7 @@ function renderActionPad(room, self) {
   const isPlaying = room.phase === "playing";
 
   renderWorldActionButton(elements.mazeAction, ACTIONS.maze, self, room, isPlaying);
-  renderWorldActionButton(elements.swapAction, ACTIONS.swap, self, room, isPlaying);
+  renderWorldActionButton(elements.gatesAction, ACTIONS.gates, self, room, isPlaying);
 
   elements.freezeActions.forEach((button, index) => {
     const target = targets[index];
@@ -367,7 +367,7 @@ function renderActionPad(room, self) {
     const worldLock = getLiveRemainingMs(room.worldActionLockRemainingMs || 0) > 0;
     if (worldLock) {
       elements.actionFeedback.textContent = `Wereldactie bezet voor ${Math.ceil(getLiveRemainingMs(room.worldActionLockRemainingMs || 0) / 1000)}s.`;
-    } else if (getLiveRemainingMs(self.cooldowns?.maze || 0) <= 0 && getLiveRemainingMs(self.cooldowns?.swap || 0) <= 0 && getLiveRemainingMs(self.cooldowns?.freeze || 0) <= 0) {
+    } else if (getLiveRemainingMs(self.cooldowns?.maze || 0) <= 0 && getLiveRemainingMs(self.cooldowns?.gates || 0) <= 0 && getLiveRemainingMs(self.cooldowns?.freeze || 0) <= 0) {
       elements.actionFeedback.textContent = "Alle acties zijn klaar om te gebruiken.";
     }
   }
@@ -397,7 +397,7 @@ function renderWorldActionButton(button, action, self, room, isPlaying) {
 
 function resetPadButtons() {
   renderWorldActionButtonSkeleton(elements.mazeAction, ACTIONS.maze);
-  renderWorldActionButtonSkeleton(elements.swapAction, ACTIONS.swap);
+  renderWorldActionButtonSkeleton(elements.gatesAction, ACTIONS.gates);
   elements.freezeActions.forEach((button, index) => {
     button.disabled = true;
     button.dataset.targetId = "";
@@ -448,27 +448,6 @@ function getLiveRemainingMs(baseRemainingMs) {
   }
 
   return Math.max(0, baseRemainingMs - (Date.now() - state.roomSyncedAt));
-}
-
-function getEffectiveDirection(direction) {
-  const self = state.room?.players?.find((player) => player.id === state.selfPlayerId);
-  if (self?.activeEffect?.id !== "swap") {
-    return direction;
-  }
-
-  if (direction === "up") {
-    return "down";
-  }
-  if (direction === "down") {
-    return "up";
-  }
-  if (direction === "left") {
-    return "right";
-  }
-  if (direction === "right") {
-    return "left";
-  }
-  return direction;
 }
 
 function renderWorldActionButtonSkeleton(button, action) {

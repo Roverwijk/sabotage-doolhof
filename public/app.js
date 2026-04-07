@@ -9,7 +9,8 @@ const state = {
   room: null,
   selfPlayerId: null,
   mode: window.location.pathname === "/controller" ? "controller" : "dashboard",
-  joined: false
+  joined: false,
+  previousRoom: null
 };
 
 const elements = {
@@ -55,6 +56,9 @@ const socket = new WebSocket(`${socketProtocol}//${window.location.host}`);
 const activeInputs = new Map();
 let countdownIntervalId = 0;
 let overlayIntervalId = 0;
+let audioContext = null;
+let audioUnlocked = false;
+let overlayLastSecond = null;
 
 cleanupOldServiceWorkers();
 wireJoinForm();
@@ -62,6 +66,7 @@ wireControls();
 wireKeyboard();
 wireStartButton();
 wireStopButton();
+wireAudioUnlock();
 configureMode();
 render();
 
@@ -88,11 +93,14 @@ socket.addEventListener("message", (event) => {
   }
 
   if (message.type === "state") {
+    const previousRoom = state.room;
     state.room = {
       ...message.room,
       dashboards: message.dashboards
     };
+    state.previousRoom = previousRoom;
     state.selfPlayerId = message.selfPlayerId || null;
+    handleRoomSounds(previousRoom, state.room);
     render();
   }
 });
@@ -212,6 +220,28 @@ function wireStopButton() {
   });
 }
 
+function wireAudioUnlock() {
+  const unlock = () => {
+    if (state.mode !== "dashboard") {
+      return;
+    }
+
+    const context = getAudioContext();
+    if (!context) {
+      return;
+    }
+
+    if (context.state === "suspended") {
+      context.resume().catch(() => {});
+    }
+    audioUnlocked = true;
+  };
+
+  ["pointerdown", "keydown", "touchstart"].forEach((eventName) => {
+    window.addEventListener(eventName, unlock, { passive: true });
+  });
+}
+
 function startRepeatingInput(direction) {
   sendInput(direction);
 
@@ -306,6 +336,7 @@ function renderCountdownOverlay(room) {
   elements.countdownOverlay.classList.toggle("hidden", !visible);
   if (!visible) {
     window.clearInterval(overlayIntervalId);
+    overlayLastSecond = null;
     return;
   }
 
@@ -325,6 +356,13 @@ function renderCountdownOverlay(room) {
       : 0;
     const seconds = Math.max(1, Math.ceil((remainingMs || 0) / 1000));
     elements.countdownOverlayNumber.textContent = String(seconds);
+
+    if (state.mode === "dashboard" && overlayLastSecond !== seconds) {
+      if (seconds <= 3) {
+        playCountdownTick(seconds);
+      }
+      overlayLastSecond = seconds;
+    }
   };
 
   window.clearInterval(overlayIntervalId);
@@ -410,6 +448,7 @@ function renderBoard(room) {
   const playersByCell = new Map(room.players.map((player) => [`${player.position.x},${player.position.y}`, player]));
   const goalsByCell = new Map(room.players.map((player) => [`${player.goal.x},${player.goal.y}`, player]));
   const { grid } = room.maze;
+  const portalCells = new Set(Object.values(room.maze.portals || {}).map((portal) => `${portal.x},${portal.y}`));
 
   elements.mazeBoard.innerHTML = "";
   elements.mazeBoard.style.gridTemplateColumns = `repeat(${grid[0].length}, var(--cell-size))`;
@@ -417,6 +456,10 @@ function renderBoard(room) {
     row.forEach((cell, x) => {
       const cellElement = document.createElement("div");
       cellElement.className = `maze-cell ${cell === 1 ? "wall" : "path"}`;
+      if (portalCells.has(`${x},${y}`)) {
+        cellElement.classList.add("portal-cell");
+        cellElement.classList.add(room.gatesOpenRemainingMs > 0 ? "is-open" : "is-closed");
+      }
 
       const goalOwner = goalsByCell.get(`${x},${y}`);
       if (goalOwner) {
@@ -438,7 +481,7 @@ function renderBoard(room) {
         dot.title = player.name;
         cellElement.append(dot);
 
-        if (player.activeEffect?.id === "swap") {
+        if (player.activeEffect?.id === "__unused_swap__") {
           const indicator = document.createElement("div");
           indicator.className = "inverse-indicator";
           indicator.textContent = "↔";
@@ -640,6 +683,126 @@ function getActionPrompt(actionLabel) {
     return "Bevries speler";
   }
   return actionLabel;
+}
+
+function handleRoomSounds(previousRoom, nextRoom) {
+  if (state.mode !== "dashboard" || !previousRoom || !nextRoom) {
+    return;
+  }
+
+  const previousTotalScore = previousRoom.players.reduce((sum, player) => sum + player.score, 0);
+  const nextTotalScore = nextRoom.players.reduce((sum, player) => sum + player.score, 0);
+  if (nextTotalScore > previousTotalScore) {
+    playSound("goal");
+  }
+
+  if ((previousRoom.gatesOpenRemainingMs || 0) <= 0 && (nextRoom.gatesOpenRemainingMs || 0) > 0) {
+    playSound("gates");
+  }
+
+  const previousFreezeIds = new Set(previousRoom.players.filter((player) => player.activeEffect?.id === "freeze").map((player) => player.id));
+  const newFreeze = nextRoom.players.some((player) => player.activeEffect?.id === "freeze" && !previousFreezeIds.has(player.id));
+  if (newFreeze) {
+    playSound("freeze");
+  }
+
+  if (previousRoom.message !== nextRoom.message && /verschuift het doolhof/i.test(nextRoom.message || "")) {
+    playSound("shuffle");
+  }
+
+  if (previousRoom.phase !== "playing" && nextRoom.phase === "playing") {
+    playSound("start");
+  }
+}
+
+function getAudioContext() {
+  if (audioContext) {
+    return audioContext;
+  }
+
+  const Context = window.AudioContext || window.webkitAudioContext;
+  if (!Context) {
+    return null;
+  }
+
+  audioContext = new Context();
+  return audioContext;
+}
+
+function playSound(kind) {
+  if (state.mode !== "dashboard") {
+    return;
+  }
+
+  const context = getAudioContext();
+  if (!context || (!audioUnlocked && context.state === "suspended")) {
+    return;
+  }
+
+  if (context.state === "suspended") {
+    context.resume().catch(() => {});
+  }
+
+  const now = context.currentTime;
+  if (kind === "goal") {
+    playTone(context, now, 523.25, 0.12, "triangle", 0.06);
+    playTone(context, now + 0.08, 659.25, 0.16, "triangle", 0.05);
+    return;
+  }
+
+  if (kind === "freeze") {
+    playTone(context, now, 250, 0.18, "square", 0.05);
+    playTone(context, now + 0.04, 180, 0.22, "sawtooth", 0.035);
+    return;
+  }
+
+  if (kind === "gates") {
+    playTone(context, now, 390, 0.1, "sine", 0.06);
+    playTone(context, now + 0.08, 520, 0.18, "sine", 0.055);
+    return;
+  }
+
+  if (kind === "shuffle") {
+    playTone(context, now, 310, 0.1, "sawtooth", 0.04);
+    playTone(context, now + 0.05, 270, 0.1, "sawtooth", 0.035);
+    playTone(context, now + 0.1, 220, 0.16, "triangle", 0.03);
+    return;
+  }
+
+  if (kind === "start") {
+    playTone(context, now, 440, 0.08, "triangle", 0.05);
+    playTone(context, now + 0.08, 660, 0.18, "triangle", 0.05);
+  }
+}
+
+function playCountdownTick(seconds) {
+  if (state.mode !== "dashboard") {
+    return;
+  }
+
+  const context = getAudioContext();
+  if (!context || (!audioUnlocked && context.state === "suspended")) {
+    return;
+  }
+
+  const frequency = seconds === 1 ? 740 : seconds === 2 ? 660 : 580;
+  playTone(context, context.currentTime, frequency, 0.08, "square", 0.03);
+}
+
+function playTone(context, startTime, frequency, duration, type, gainValue) {
+  const oscillator = context.createOscillator();
+  const gain = context.createGain();
+
+  oscillator.type = type;
+  oscillator.frequency.setValueAtTime(frequency, startTime);
+  gain.gain.setValueAtTime(0.0001, startTime);
+  gain.gain.linearRampToValueAtTime(gainValue, startTime + 0.01);
+  gain.gain.exponentialRampToValueAtTime(0.0001, startTime + duration);
+
+  oscillator.connect(gain);
+  gain.connect(context.destination);
+  oscillator.start(startTime);
+  oscillator.stop(startTime + duration);
 }
 
 function isTypingTarget(target) {
